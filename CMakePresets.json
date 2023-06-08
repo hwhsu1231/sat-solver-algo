@@ -1,0 +1,38 @@
+{
+  "version": 4,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 23,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "win32-msvc-x64-vs2019-multi",
+      "displayName": "Windows MSVC x64 (Visual Studio 16 2019)",
+      "description": "Using MSVC x64 compilers with \"Visual Studio 16 2019\" on Windows",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "installDir": "${sourceDir}/install/${presetName}",
+      "generator": "Visual Studio 16 2019",
+      "toolset": "host=x64",
+      "architecture": "x64",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "cl.exe",
+        "CMAKE_CXX_COMPILER": "cl.exe"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "win32-msvc-x64-vs2019-multi-debug",
+      "displayName": "Build - Debug",
+      "configurePreset": "win32-msvc-x64-vs2019-multi",
+      "configuration": "Debug"
+    },
+    {
+      "name": "win32-msvc-x64-vs2019-multi-release",
+      "displayName": "Build - Release",
+      "configurePreset": "win32-msvc-x64-vs2019-multi",
+      "configuration": "Release"
+    }
+  ]
+}
