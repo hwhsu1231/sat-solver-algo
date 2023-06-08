@@ -1,0 +1,6 @@
+# build directories
+build
+out
+
+# others
+docs
