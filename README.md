@@ -1,4 +1,4 @@
-# sat-solver-algo
+# SAT Solver Algorithm
 
 ## Overview
 
