@@ -7,7 +7,7 @@
   },
   "configurePresets": [
     {
-      "name": "win32-msvc-x64-vs2019-multi",
+      "name": "default",
       "displayName": "Windows MSVC x64 (Visual Studio 16 2019)",
       "description": "Using MSVC x64 compilers with \"Visual Studio 16 2019\" on Windows",
       "binaryDir": "${sourceDir}/build/${presetName}",
@@ -23,15 +23,15 @@
   ],
   "buildPresets": [
     {
-      "name": "win32-msvc-x64-vs2019-multi-debug",
+      "name": "default-debug",
       "displayName": "Build - Debug",
-      "configurePreset": "win32-msvc-x64-vs2019-multi",
+      "configurePreset": "default",
       "configuration": "Debug"
     },
     {
-      "name": "win32-msvc-x64-vs2019-multi-release",
+      "name": "default-release",
       "displayName": "Build - Release",
-      "configurePreset": "win32-msvc-x64-vs2019-multi",
+      "configurePreset": "default",
       "configuration": "Release"
     }
   ]

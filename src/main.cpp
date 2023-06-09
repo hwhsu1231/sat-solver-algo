@@ -32,23 +32,12 @@ int main(int argc, const char *argv[])
         VSIDS         = 4
         MOM           = 8
         JW            = 16
-        
 
         BCP                     = 0
         BCP + VSIDS             = 0+4     = 4
         BCP + VSIDS + MOM       = 0+4+8   = 12
         BCP + VSIDS + JW        = 0+4+16  = 20
      */
-   
-    // // conditionNameList.push_back("DFS           ");
-    // conditionNameList.push_back("CDCL          ");
-    // conditionNameList.push_back("CDCL+MOM+VSIDS");
-    // conditionNameList.push_back("CDCL+JW+VSIDS ");
-
-    // // conditionEnumList.push_back(32);        // DFS
-    // conditionEnumList.push_back(0);         // CDCL
-    // conditionEnumList.push_back(12);        // CDCL + MOM + VSIDS
-    // conditionEnumList.push_back(24);        // CDCL + JW  + VSIDS
 
     conditionNameList.push_back("BCP              ");
     conditionNameList.push_back("BCP + VSIDS      ");
@@ -124,22 +113,6 @@ int main(int argc, const char *argv[])
             }
         }
         classCondMeanList.push_back(condMeanList);
-    }
-
-
-
-    std::cout << "\n\n\n";
-    for (size_t it1 = 0; it1 < classNameList.size(); it1++) {
-        std::cout << "Class: " << classNameList[it1] << std::endl;
-        for (size_t it2 = 0; it2 < conditionNameList.size(); it2++) {
-            std::cout << "---- " << conditionNameList[it2] << " = "; 
-            if (classCondMeanList[it1][it2] == -1) {
-                std::cout << "None" << std::endl;
-            } else {
-                std::cout << classCondMeanList[it1][it2] << "ms" << std::endl;
-            }
-            
-        }
     }
 
     return 0;
